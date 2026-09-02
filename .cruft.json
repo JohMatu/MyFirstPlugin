@@ -1,0 +1,35 @@
+{
+  "template": "https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin",
+  "commit": "b67d40d4d5d4be4a639baa56ecf9af41f1680830",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Johanna Matusche",
+      "email": "johanna.matusche@kit.edu",
+      "github_username": "JohMatu",
+      "plugin_name": "MyFirstPlugin",
+      "module_name": "myfirstplugin",
+      "short_description": "Test what is needed to create and use an own Nomad oasis plugin",
+      "version": "0.1.0",
+      "license": "MIT",
+      "include_schema_package": true,
+      "include_normalizer": true,
+      "include_parser": true,
+      "include_app": true,
+      "include_example_uploads": true,
+      "include_action": false,
+      "include_api": true,
+      "include_north_tools": true,
+      "north_tool_name": "my_north_tool",
+      "include_dashboard": false,
+      "include_citation_file": false,
+      "_copy_without_render": [
+        "*.html",
+        "*.png"
+      ],
+      "_template": "https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin",
+      "_commit": "b67d40d4d5d4be4a639baa56ecf9af41f1680830"
+    }
+  },
+  "directory": null
+}
