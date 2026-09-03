@@ -26,7 +26,12 @@ maintainers = [
 license = { file = "LICENSE" }
 dependencies = [
     "nomad-lab>=1.4.3",
-    "fastapi"
+    "fastapi",
+    "pynxtools>=0.15.1",
+    "numpy",
+    "pandas",
+    "findiff>=0.11.1",
+    "tzlocal",
 ]
 
 [project.urls]
@@ -53,7 +58,7 @@ north = [
 extra-index-url = [
   "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple",
 ]
-    
+
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
 exclude = [
@@ -133,6 +138,11 @@ package-dir = { "" = "src" }
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+"myfirstplugin" = [
+    "configs/*.json",
+]
+
 [project.entry-points.'nomad.plugin']
 parser_entry_point = "myfirstplugin.parsers:parser_entry_point"
 schema_package_entry_point = "myfirstplugin.schema_packages:schema_package_entry_point"
@@ -141,6 +151,9 @@ app_entry_point = "myfirstplugin.apps:app_entry_point"
 example_upload_entry_point = "myfirstplugin.example_uploads:example_upload_entry_point"
 api_entry_point = "myfirstplugin.apis:api_entry_point"
 north_entry_point = "myfirstplugin.north_tools:north_entry_point"
+
+[project.entry-points."pynxtools.reader"]
+spm = "your_plugin.reader:SPMReader"
 
 [tool.cruft]
 # Avoid updating workflow files, this leads to permissions issues
